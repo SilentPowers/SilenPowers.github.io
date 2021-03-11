@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Input, Output</title>
   <script>
-    addToOutput = function(){
-      const input = document.getElementById("input").textContent;
-      document.getElementById("output").innerHTML = input;
+    addToOutput = function () {
+      const input = document.getElementById("input").value;
+      document.getElementById("output").innerHTML.value = input;
     }
-
-  
   </script>
+
 </head>
+
 <body>
 
- 
   <div class="input-field">
-    <label for="input">Input:</label><br>
+    <label for="input-label">Input:</label><br>
     <input type="text" id="input">
   </div>
   <br>
   <div class="output-field">
-    <label for="output">Output:</label><br>
+    <label for="output-label">Output:</label><br>
     <textarea name="text" id="output" cols="30" rows="10"></textarea>
   </div>
   <br>
@@ -31,8 +32,9 @@
     <button class="input-to-output" onclick="addToOutput()">Click to add</button>
   </div>
 
-
   <p> <a href="https://validator.w3.org/check/referer">Validate</a> </p>
-  
+
+ 
 </body>
+
 </html>
