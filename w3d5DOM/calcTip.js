@@ -1,3 +1,5 @@
+window.onload = calcTip;
+
 function calcTip() {
   const button = document.getElementById("btn").onclick = function(){
   const subtotalElem = document.getElementById("subtotal").value;
@@ -9,4 +11,3 @@ function calcTip() {
   totalElem.innerHTML = '$' + total.toFixed(2);
 }
 }
-window.onload = calcTip;
