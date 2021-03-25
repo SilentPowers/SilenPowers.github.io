@@ -4,4 +4,17 @@ body{
 
 h2{
   font-size: 33px;
+  color: #fff;
+}
+
+a:hover{
+  color: coral;
+}
+/* visited */
+a:active{
+  color: red;
+}
+
+a{
+  color: #fff;
 }
