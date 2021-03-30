@@ -17,4 +17,4 @@ let ladder = {
   }
 };
 
-ladder.up().up().showStep();
+ladder.up().up().showStep().down().up().up().showStep();

@@ -40,8 +40,10 @@ function Accumulator(initialValue, increment) {
   }
 }
 
-//const accum = new Accumulator(5,10);
-
+const accum = new Accumulator(5,10);
+console.log(accum.accumulate())
+console.log(accum.accumulate())
+console.log(accum.report())
 /**
  * @returns {Calculator} this is a constructor function
  */
@@ -66,3 +68,4 @@ function Calculator(a,b) {
 const calc = new Calculator();
 calc.setValues(2,5);
 console.log(calc.sum());
+console.log(calc.mul());
