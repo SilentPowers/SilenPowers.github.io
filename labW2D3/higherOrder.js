@@ -81,3 +81,16 @@ console.log("expect: 120: ", arr.reduce(mulFun, 1));
 console.log("expect: 120: ", myReduce(arr, mulFun, 1));
 
 
+//my example
+
+const greet = function(greeting){
+  return function(name){
+    return `${greeting} ${name}`;
+  };
+};
+const greeter = greet("hey");
+console.log(greeter("Connor"));
+
+console.log(greet("hello")("Connor"));
+
+//const greetArr = greeting => name => console.log(`${greeting} ${name}`);

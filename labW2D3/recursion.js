@@ -206,7 +206,26 @@ function outputNames(node) {
 
 }
 
-
-
+/*
+Given a target value, return true or false if there is a 
+node in the tree with the target value. E.g.,
+contains(tree, “Lisa”) → true
+contains(tree, “Crusty”) → false
+*/
+/**
+ * 
+ * @param {*} node 
+ * @param {*} value 
+ */
+function targetValue(node, value){
+if(node.value === value){
+  return true;
+} else if(Array.isArray(node)){
+    for(const el of node){
+      return targetValue(el, value)
+    }
+  }
+}
 
 outputNames(abe);
+console.log(targetValue(abe, "Maggie"))
