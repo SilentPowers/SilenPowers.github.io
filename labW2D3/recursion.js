@@ -31,7 +31,7 @@ function sumSalaries(department) {
     return sum;
   }
 }
-//console.log(sumSalaries(company)); // 7700
+console.log(sumSalaries(company)); // 7700
 
 
 
@@ -219,13 +219,13 @@ contains(tree, “Crusty”) → false
  */
 function targetValue(node, value){
 if(node.value === value){
-  return true;
-} else if(Array.isArray(node)){
-    for(const el of node){
-      return targetValue(el, value)
+  console.log(node.value);
+} else if(Array.isArray(node.descendents)){
+    for(const el of node.descendents){
+      return targetValue(el, value);
     }
   }
 }
 
-outputNames(abe);
-console.log(targetValue(abe, "Maggie"))
+//outputNames(abe);
+targetValue(abe, "Maggie")

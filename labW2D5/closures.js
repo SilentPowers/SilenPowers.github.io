@@ -35,7 +35,7 @@ function inBetween(low, high) {
     return x > low && x < high;
   };
 }
-
+console.log(arr.filter(inBetween(5,10)))
 /**
  * 
  * @param {String} fieldName is a property on object to be sorted
