@@ -1,5 +1,5 @@
 "use strict";
-
+module.exports = {MountainBike};
 /*
 There is a file, bicycle.java, in the Mocha test assignment folder for today. 
 Rename it to be a .js
@@ -21,25 +21,25 @@ g. Use the bikeTests.js mocha test file to test it.
 /**
  * 
  */
-function Bicycle() {
-    this.gear;
-    this.speed;
-}
-
-Bicycle.prototype.applyBrake = function (decrement) {
-    this.speed -= decrement;
-};
-
-Bicycle.prototype.speedUp = function (increment) 
+const Bike = {
+    gear : 1,
+    speed : 0,
+    
+    applyBrake: function (decrement) {
+        this.speed -= decrement;
+    },
+    
+  speedUp: function (increment) 
     {
-     this.speed += increment;
-    };
+        this.speed += increment;
+    }
+};
 
 
 
     const MountainBike = {
 
-        __proto__: Bicycle,
+        __proto__: Bike,
 
         // the MountainBike subclass adds one more field
         seatHeight: 1,
@@ -51,32 +51,14 @@ Bicycle.prototype.speedUp = function (increment)
     };
     
 
-    // overriding toString() method
-    // of Bicycle to print more info
-    //     @Override public String toString()
-    //     {
-    //         return ("No of gears are " + gear + "\n"
-    //                 + "speed of bicycle is " + speed); + "\nseat height is "
-    //                 + seatHeight);
-    //     }
-    // }
-
-
-    const bike = {
-        gear: 1,
-        speed: 0
-    };
-
     const mountBike = {
         gear: 3,
         speed: 2,
         seatHeight: 9,
-        __proto__: Bicycle,
+        __proto__: Bike,
     };
 
-
-
-    const myBike = new MountainBike();
-    console.log(myBike.speedUp(1));
-    console.log(myBike.speedUp(2));
-    console.log(myBike.speed);
+    // const myBike = new MountainBike();
+    // console.log(myBike.speedUp(1));
+    // console.log(myBike.speedUp(2));
+    // console.log(myBike.speed);
